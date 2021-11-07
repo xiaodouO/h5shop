@@ -41,54 +41,6 @@ body {
   min-height: 500px;
   padding: 14px;
 }
-.index-content .account-box .nav-box {
-  display: flex;
-  align-items: stretch;
-  height: 28px;
-  color: #838383;
-  font-size: 12px;
-}
-.index-content .account-box .nav-box span {
-  padding-bottom: 5px;
-}
-.index-content .account-box .nav-box span + span {
-  margin-left: 14px;
-}
-.index-content .account-box .nav-box span.active {
-  position: relative;
-}
-.index-content .account-box .nav-box span.active:before {
-  content: '';
-  width: 10px;
-  height: 2px;
-  background: #3FB359;
-  position: absolute;
-  bottom: 0;
-  left: calc(50% - 5px);
-}
-.index-content .account-box .input-box {
-  display: flex;
-  align-items: center;
-  padding-left: 40px;
-  margin-top: 15px;
-  border-radius: 4px;
-  background: url("../images/img-6.png") no-repeat 10px center #F5F6FA;
-  background-size: 18px auto;
-}
-.index-content .account-box .input-box input {
-  height: 40px;
-  width: calc(100% - 80px);
-  border: none;
-  background: transparent;
-}
-.index-content .account-box .input-box button {
-  height: 20px;
-  border: none;
-  border-left: 1px solid #000;
-  color: #54A569;
-  background: transparent;
-  width: 80px;
-}
 .index-content .role-row {
   color: #333333;
   font-size: 16px;
@@ -182,4 +134,172 @@ body {
   font-size: 17px;
   font-weight: bold;
   color: #D32525;
+}
+.account-box {
+  position: relative;
+}
+.account-box .nav-box {
+  display: flex;
+  align-items: stretch;
+  height: 28px;
+  color: #838383;
+  font-size: 12px;
+}
+.account-box .nav-box span {
+  padding-bottom: 5px;
+}
+.account-box .nav-box span + span {
+  margin-left: 14px;
+}
+.account-box .nav-box span.active {
+  position: relative;
+}
+.account-box .nav-box span.active:before {
+  content: '';
+  width: 10px;
+  height: 2px;
+  background: #3FB359;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 5px);
+}
+.account-box .input-box {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  margin-top: 15px;
+  border-radius: 4px;
+  background: url("../images/img-6.png") no-repeat 10px center #F5F6FA;
+  background-size: 18px auto;
+}
+.account-box .input-box input {
+  height: 40px;
+  width: calc(100% - 80px);
+  border: none;
+  background: transparent;
+}
+.account-box .input-box button {
+  height: 20px;
+  border: none;
+  border-left: 1px solid #000;
+  color: #54A569;
+  background: transparent;
+  width: 80px;
+}
+.account-box .drop-box {
+  position: absolute;
+  left: 0;
+  top: 85px;
+  width: 100%;
+  background: #F5F6FA;
+  border-radius: 4px;
+  padding: 10px;
+}
+.account-box .drop-box ul {
+  max-height: 110px;
+  overflow: auto;
+}
+.account-box .drop-box li {
+  line-height: 30px;
+}
+.account-box .drop-box li span:first-child {
+  margin-right: 10px;
+}
+.account-box .drop-box .role-btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.account-box .drop-box .role-btn-box .role-ok-btn {
+  min-width: 90px;
+  width: auto;
+  height: 30px;
+  padding: 0 14px;
+  background: #49C265;
+  border-radius: 19px;
+  border: none;
+  font-size: 14px;
+  color: #fff;
+}
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  border-top: 1px solid #EAEAEA;
+}
+.bottom-bar .l-wrapper {
+  font-weight: bold;
+  font-size: 12px;
+}
+.bottom-bar .l-wrapper span {
+  color: #D32525;
+  font-size: 20px;
+}
+.bottom-bar .pay-btn {
+  width: 103px;
+  height: 40px;
+  background: #49C265;
+  border-radius: 19px;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+}
+.dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.dialog.role-list-dg {
+  display: none;
+}
+.dialog .dg-body {
+  width: 80%;
+  border-radius: 10px;
+  min-height: 80px;
+  background: #fff;
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  padding: 20px;
+}
+.dialog .dg-body .dg-title {
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+.dialog .dg-body .dg-text {
+  font-size: 16px;
+  color: #4F4F51;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+.dialog .btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.dialog .btn-box .ok-btn {
+  min-width: 90px;
+  width: auto;
+  height: 36px;
+  padding: 0 14px;
+  background: #49C265;
+  border-radius: 19px;
+  border: none;
+  font-size: 16px;
+  color: #fff;
 }

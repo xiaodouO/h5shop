@@ -5,15 +5,16 @@
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1">
   <title>Title</title>
   <link rel="stylesheet" href="./css/index.css">
+  <script src="//cdn.bootcdn.net/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
 <div class="index-body">
   <div class="top-box">
-      <img src="./images/img-4.png" alt="">
-      <div class="r-wrapper">
-        <div>礼包商城</div>
-        <span>轻松便捷，更多让利</span>
-      </div>
+    <img src="./images/img-4.png" alt="">
+    <div class="r-wrapper">
+      <div>礼包商城</div>
+      <span>轻松便捷，更多让利</span>
+    </div>
   </div>
   <div class="index-content">
     <div class="account-box">
@@ -22,51 +23,156 @@
         <span>手机账号</span>
       </div>
       <div class="input-box">
-        <input type="text">
+        <input type="text" placeholder="请输入账号">
         <button>确定</button>
       </div>
-      <div class="role-row">
+      <div class="role-row" onclick="showRoleDg()">
         <span>请选择区服及角色</span>
         <i></i>
       </div>
-      <div class="goods-title">
-        <span>充值优惠</span>
-        <i></i>
+    </div>
+    <div class="goods-title">
+      <span>充值优惠</span>
+      <i onclick="showTips()"></i>
+    </div>
+    <div class="goods-list">
+      <div class="item">
+        <div class="goods-img"><img src="./images/img-2.png" alt=""></div>
+        <div class="goods-name">6元档位</div>
+        <div class="goods-price">￥6.00</div>
       </div>
-      <div class="goods-list">
-        <div class="item">
-          <div class="goods-img"><img src="./images/img-2.png" alt=""></div>
-          <div class="goods-name">6元档位</div>
-          <div class="goods-price">￥6.00</div>
-        </div>
 
-        <div class="item">
-          <div class="goods-img"><img src="./images/img-2.png" alt=""></div>
-          <div class="goods-name">6元档位</div>
-          <div class="goods-price">￥6.00</div>
-        </div>
-
-        <div class="item">
-          <div class="goods-img"><img src="./images/img-2.png" alt=""></div>
-          <div class="goods-name">6元档位</div>
-          <div class="goods-price">￥6.00</div>
-        </div>
-
-        <div class="item">
-          <div class="goods-img"><img src="./images/img-2.png" alt=""></div>
-          <div class="goods-name">6元档位</div>
-          <div class="goods-price">￥6.00</div>
-        </div>
-
-        <div class="item">
-          <div class="goods-img"><img src="./images/img-2.png" alt=""></div>
-          <div class="goods-name">6元档位</div>
-          <div class="goods-price">￥6.00</div>
-        </div>
-
+      <div class="item">
+        <div class="goods-img"><img src="./images/img-2.png" alt=""></div>
+        <div class="goods-name">6元档位</div>
+        <div class="goods-price">￥6.00</div>
       </div>
+
+      <div class="item">
+        <div class="goods-img"><img src="./images/img-2.png" alt=""></div>
+        <div class="goods-name">6元档位</div>
+        <div class="goods-price">￥6.00</div>
+      </div>
+
+      <div class="item">
+        <div class="goods-img"><img src="./images/img-2.png" alt=""></div>
+        <div class="goods-name">6元档位</div>
+        <div class="goods-price">￥6.00</div>
+      </div>
+
+      <div class="item">
+        <div class="goods-img"><img src="./images/img-2.png" alt=""></div>
+        <div class="goods-name">6元档位</div>
+        <div class="goods-price">￥6.00</div>
+      </div>
+
+    </div>
+    <div class="bottom-bar">
+      <span class="l-wrapper">实付款：<span>￥6.00</span></span>
+      <button class="pay-btn">立即支付</button>
+    </div>
+  </div>
+</div>
+<div class="dialog role-list-dg">
+  <div class="dg-body">
+    <div class="account-box">
+      <div class="nav-box">
+        <span class="active">游戏账号</span>
+        <span>手机账号</span>
+      </div>
+      <div class="input-box">
+        <input type="text" placeholder="请输入账号">
+        <button>确定</button>
+        <div class="drop-box">
+          <ul>
+            <li>
+              <span>XXX区</span>
+              <span>xxxxx</span>
+            </li>
+            <li>
+              <span>XXX区</span>
+              <span>xxxxx</span>
+            </li>
+            <li>
+              <span>XXX区</span>
+              <span>xxxxx</span>
+            </li>
+            <li>
+              <span>XXX区</span>
+              <span>xxxxx</span>
+            </li>
+            <li>
+              <span>XXX区</span>
+              <span>xxxxx</span>
+            </li>
+          </ul>
+          <div class="role-btn-box">
+            <button class="role-ok-btn">选择角色</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn-box">
+      <button class="ok-btn">确定</button>
     </div>
   </div>
 </div>
 </body>
+<script>
+  // 账号切换
+  $('.nav-box').find('span').click(function () {
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+  });
+
+  // 角色列表弹窗
+  function showRoleDg() {
+    $('.role-list-dg').show();
+  }
+
+  $('.role-list-dg').find('.ok-btn').click(function () {
+    $('.role-list-dg').hide();
+  })
+
+  // 充值小助手弹窗
+  function showTips() {
+    var msg = $('<div style="font-size:12px;">' +
+      '1.购买福利前，请核查当前账号及角色信息；购买成功后，请在游戏内查看邮箱通知，会通过邮箱发放购买物品<br>' +
+      '2.本页面充值享受权益与游戏内充值完全一致<br>' +
+      '3.本页面不定期开放其他福利，请保持关注<br>' +
+      '4.切勿使用作弊手段侵犯平台合法权益，平台保留在法律范围内对该服务的最终解释</div>');
+    showMessage({msg: msg, title: '充值小助手'});
+  }
+
+  /**
+   *
+   * @param options={
+   *   msg:'',消息内容，支持html
+   *   title:'',弹窗标题，默认为空
+   * }
+   *
+   */
+  function showMessage(options = {msg: '', title: ''}) {
+    var $dialog = $('<div class="dialog">\n' +
+      '    <div class="dg-body">\n' +
+      '      <div class="dg-title"></div>\n' +
+      '      <div class="dg-text"></div>\n' +
+      '      <div class="btn-box">\n' +
+      '        <button class="ok-btn">确定</button>\n' +
+      '      </div>\n' +
+      '    </div>\n' +
+      '  </div>');
+    if (options.title) {
+      $dialog.find('.dg-title').text(options.title);
+    } else {
+      $dialog.find('.dg-title').remove();
+    }
+    $dialog.find('.dg-text').html(options.msg);
+    $dialog.find('.ok-btn').click(function () {
+      $dialog.remove();
+    })
+    $('body').append($dialog);
+  }
+
+</script>
 </html>
