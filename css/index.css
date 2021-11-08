@@ -5,10 +5,12 @@
   box-sizing: border-box;
   outline: none;
 }
-html,
-body {
-  font-size: 14px;
+html {
   background: #fff;
+}
+body {
+  padding-bottom: 50px;
+  font-size: 14px;
 }
 .index-body {
   background: url("../images/img-5.png") no-repeat top center;
