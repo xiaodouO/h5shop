@@ -69,7 +69,7 @@
     </div>
     <div class="bottom-bar">
       <span class="l-wrapper">实付款：<span>￥6.00</span></span>
-      <button class="pay-btn">立即支付</button>
+      <button class="pay-btn" onclick="showPayMsg()">立即支付</button>
     </div>
   </div>
 </div>
@@ -128,6 +128,11 @@
   // 角色列表弹窗
   function showRoleDg() {
     $('.role-list-dg').show();
+  }
+
+  // 支付弹窗
+  function showPayMsg() {
+    showMessage({msg: '您已购买成功，请与游戏内邮件查收'});
   }
 
   $('.role-list-dg').find('.ok-btn').click(function () {
