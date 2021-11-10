@@ -119,6 +119,11 @@
 </div>
 </body>
 <script>
+//   切换商品
+  $('.goods-list').on('click','.item',function(){
+    $(this).siblings('.item').removeClass('active');
+    $(this).addClass('active');
+  });
   // 账号切换
   $('.nav-box').find('span').click(function () {
     $(this).siblings().removeClass('active');
